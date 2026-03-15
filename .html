@@ -1,0 +1,161 @@
+]<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Async Weather Tracker</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Verdana;
+            background: linear-gradient(120deg, #2c3e50, #4ca1af);
+            color: white;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 20px;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            margin-top: 25px;
+        }
+
+        /* search box style */
+        .searchBox {
+            background: #ffffff;
+            color: black;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* weather box style */
+        .weatherBox {
+            background: linear-gradient(135deg, #ffecd2, #fcb69f);
+            color: #222;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 15px;
+        }
+
+        /* history box style */
+        .historyBox {
+            background: #f1f1f1;
+            color: #333;
+            margin-top: 20px;
+            padding: 15px;
+            border-left: 6px solid #ff7b00;
+            border-radius: 5px;
+        }
+
+        /* console box style */
+        .consoleBox {
+            background: #0b1c35;
+            color: #00ff90;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: left;
+            height: 120px;
+            overflow: auto;
+            font-family: monospace;
+        }
+
+        input {
+            padding: 8px;
+            width: 210px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background: #ff7b00;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e06700;
+        }
+
+        #weather p {
+            margin: 6px;
+        }
+
+        #history span {
+            background: #ddd;
+            padding: 5px 10px;
+            margin: 5px;
+            display: inline-block;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #history span:hover {
+            background: #bbb;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Async Weather Tracker</h2>
+
+    <div class="container">
+
+        <div class="searchBox">
+
+            <h3>Search City</h3>
+
+            <input type="text" id="city" placeholder="Type city name">
+            <button id="searchBtn">Check Weather</button>
+
+        </div>
+
+        <div class="weatherBox">
+
+            <h3>Weather Details</h3>
+
+            <div id="weather">
+
+                <p id="cityName"></p>
+                <p id="temp"></p>
+                <p id="condition"></p>
+                <p id="humidity"></p>
+                <p id="wind"></p>
+
+            </div>
+
+        </div>
+
+        <div class="historyBox">
+
+            <h3>Previous Searches</h3>
+
+            <div id="history"></div>
+
+        </div>
+
+        <div class="consoleBox">
+
+            <h3>Async Console Logs</h3>
+
+            <div id="console"></div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
